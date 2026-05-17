@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Галерея</title>
+
+<style>
+
+@font-face {
+  font-family: 'Benzin';
+  src: url('fonts/Benzin-Bold.otf') format('opentype');
+}
+
+body{
+  background: linear-gradient(to bottom, #e6b3c8, #e98fb4);
+  margin:0;
+  padding:20px;
+  font-family:'Benzin', sans-serif;
+}
+
+h1{
+  color:white;
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.gallery{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(160px,1fr));
+
+  gap:15px;
+}
+
+.gallery img{
+
+  width:100%;
+  aspect-ratio:1/1;
+
+  object-fit:cover;
+
+  border-radius:12px;
+
+  transition:0.2s;
+}
+
+.gallery img:hover{
+  transform:scale(1.04);
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Галерея</h1>
+
+<div class="gallery">
+
+<a href="./index.html#page1"><img src="pages/page1.jpg"></a>
+<a href="./index.html#page2"><img src="pages/page2.jpg"></a>
+<a href="./index.html#page3"><img src="pages/page3.jpg"></a>
+<a href="./index.html#page4"><img src="pages/page4.jpg"></a>
+<a href="./index.html#page5"><img src="pages/page5.jpg"></a>
+<a href="./index.html#page6"><img src="pages/page6.jpg"></a>
+<a href="./index.html#page7"><img src="pages/page7.jpg"></a>
+<a href="./index.html#page8"><img src="pages/page8.jpg"></a>
+<a href="./index.html#page9"><img src="pages/page9.jpg"></a>
+<a href="./index.html#page10"><img src="pages/page10.jpg"></a>
+<a href="./index.html#page11"><img src="pages/page11.jpg"></a>
+<a href="./index.html#page12"><img src="pages/page12.jpg"></a>
+<a href="./index.html#page13"><img src="pages/page13.jpg"></a>
+<a href="./index.html#page14"><img src="pages/page14.jpg"></a>
+<a href="./index.html#page15"><img src="pages/page15.jpg"></a>
+<a href="./index.html#page16"><img src="pages/page16.jpg"></a>
+<a href="./index.html#page17"><img src="pages/page17.jpg"></a>
+<a href="./index.html#page18"><img src="pages/page18.jpg"></a>
+<a href="./index.html#page19"><img src="pages/page19.jpg"></a>
+<a href="./index.html#page20"><img src="pages/page20.jpg"></a>
+<a href="./index.html#page21"><img src="pages/page21.jpg"></a>
+<a href="./index.html#page22"><img src="pages/page22.jpg"></a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Альбом</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+<style>
+
+@font-face {
+  font-family: 'Benzin';
+  src: url('fonts/Benzin-Bold.otf') format('opentype');
+}
+
+body{
+  background: linear-gradient(to bottom, #e6b3c8, #e98fb4);
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Benzin', sans-serif;
+}
+
+/* сердечки */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle, #ffffff 10%, transparent 10%),
+    radial-gradient(circle, #ffffff 10%, transparent 10%);
+
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* кнопка */
+#openGalleryBtn{
+  padding: 10px 20px;
+  font-size: 18px;
+  background: white;
+  color: #e43f84;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: 'Benzin', sans-serif;
+  z-index: 10;
+}
+
+.swiper{
+  width: 90%;
+  height: 90vh;
+}
+
+.swiper-slide{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.swiper-slide img{
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="./gallery.html">
+<button id="openGalleryBtn">
+Открыть галерею
+</button>
+</a>
+
+<div class="swiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide"><img src="pages/page1.jpg"></div>
+<div class="swiper-slide"><img src="pages/page2.jpg"></div>
+<div class="swiper-slide"><img src="pages/page3.jpg"></div>
+<div class="swiper-slide"><img src="pages/page4.jpg"></div>
+<div class="swiper-slide"><img src="pages/page5.jpg"></div>
+<div class="swiper-slide"><img src="pages/page6.jpg"></div>
+<div class="swiper-slide"><img src="pages/page7.jpg"></div>
+<div class="swiper-slide"><img src="pages/page8.jpg"></div>
+<div class="swiper-slide"><img src="pages/page9.jpg"></div>
+<div class="swiper-slide"><img src="pages/page10.jpg"></div>
+<div class="swiper-slide"><img src="pages/page11.jpg"></div>
+<div class="swiper-slide"><img src="pages/page12.jpg"></div>
+<div class="swiper-slide"><img src="pages/page13.jpg"></div>
+<div class="swiper-slide"><img src="pages/page14.jpg"></div>
+<div class="swiper-slide"><img src="pages/page15.jpg"></div>
+<div class="swiper-slide"><img src="pages/page16.jpg"></div>
+<div class="swiper-slide"><img src="pages/page17.jpg"></div>
+<div class="swiper-slide"><img src="pages/page18.jpg"></div>
+<div class="swiper-slide"><img src="pages/page19.jpg"></div>
+<div class="swiper-slide"><img src="pages/page20.jpg"></div>
+<div class="swiper-slide"><img src="pages/page21.jpg"></div>
+<div class="swiper-slide"><img src="pages/page22.jpg"></div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+
+const swiper = new Swiper('.swiper', {
+
+  loop: false,
+
+  speed: 600,
+
+  grabCursor: true,
+
+  slidesPerView: 1,
+
+  spaceBetween: 0,
+
+  mousewheel: true,
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+
+});
+
+
+// переход из галереи
+
+const hash = window.location.hash;
+
+if(hash){
+
+const slideNumber =
+parseInt(hash.replace('#page',''));
+
+if(!isNaN(slideNumber)){
+
+swiper.slideTo(slideNumber - 1);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
